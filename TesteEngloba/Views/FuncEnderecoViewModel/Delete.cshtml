@@ -1,0 +1,125 @@
+﻿@model TesteEngloba.ViewModels.FuncEnderecoViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Deletar</title>
+</head>
+<body>
+
+<div>
+    <h4>FuncEnderecoViewModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Nome:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            CPF:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt class = "col-sm-2">
+            RG:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+        <dt class="col-sm-2">
+            Orgão Emissor do RG:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.RgEmissor)
+        </dd>
+        <dt class = "col-sm-2">
+            Título de Eleitor:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TituloEleitor)
+        </dd>
+        <dt class = "col-sm-2">
+            CNH:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CNH)
+        </dd>
+        <dt class = "col-sm-2">
+            Considerar como Gestor?
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gestor)
+        </dd>
+        <dt class = "col-sm-2">
+            CEP:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+        <dt class = "col-sm-2">
+            Endereço:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Logradouro)
+        </dd>
+        <dt class = "col-sm-2">
+            Número:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nro)
+        </dd>
+        <dt class = "col-sm-2">
+            Complemento:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+        <dt class="col-sm-2">
+            Bairro:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt class = "col-sm-2">
+            Cidade:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt class = "col-sm-2">
+            Estado:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+        <dt class = "col-sm-2">
+            Referência:
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Referencia)
+        </dd>
+        <dt class = "col-sm-2">
+            Ativo?
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="FuncionarioId" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <input type="submit" value="Voltar" asp-action="Index"class="btn btn-danger" />
+    </form>
+</div>
+</body>
+</html>
