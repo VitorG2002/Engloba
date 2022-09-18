@@ -201,7 +201,7 @@ namespace TesteEngloba.Controllers
         {
             if (id == null)
             {
-                return NotFound("kkk");
+                return NotFound();
             }
             var func = await contexto.Funcionario.SingleOrDefaultAsync(f => f.FuncionarioId == id);
             var endereco = contexto.Endereco.SingleOrDefault(e => e.FuncionarioId == func.FuncionarioId);
@@ -226,7 +226,7 @@ namespace TesteEngloba.Controllers
             fevm.Ativo = endereco.Ativo;
             if (fevm == null)
             {
-                return NotFound("222");
+                return NotFound();
             }
             return View(fevm);
         }
